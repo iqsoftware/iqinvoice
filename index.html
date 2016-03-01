@@ -39,8 +39,16 @@
    (function(){
       emailjs.init("user_SL7XynALsIF0M2ToAHgKl");
    })();
-   function EmailSend()
+    function EmailSend()
    {  
+   if(document.getElementById("mce-EMAIL").value=="")
+   {
+   document.getElementById("mce-EMAIL").focus();
+   alert("Enter a valid Email Address");
+   return false
+   }
+   else
+   {
    var name=document.getElementById("mce-FNAME").value +' ' +document.getElementById("mce-LNAME").value;
    emailjs.send("smtp_server", "invoicemail", {"message":document.getElementById("mce-MMERGE4").value,"name":name,"phone":document.getElementById("mce-MMERGE3").value,"email":document.getElementById("mce-EMAIL").value});
    alert("Thanks You for Getting in touch.");
@@ -49,6 +57,7 @@
 	document.getElementById("mce-LNAME").value ="";
 	document.getElementById("mce-MMERGE3").value="";
 	document.getElementById("mce-EMAIL").value="";
+   }
    }
    
    
@@ -98,7 +107,7 @@
                 <div class="intro-lead-in">IQ invoice - Automation System !</div>
                 <div class="intro-heading">IQ Invoice is a user-friendly routing system designed to mirror your current approval processes and workflows, but without all of the paper and inefficiencies.<br/><br/>
 This means the invoice will end up in the right place at the right time. Make use of the system’s high-level reporting function. Tracking can be done through the entire lifecycle of the invoice and each stage of the invoice can be identified easily. If an invoice is in the system it is available no matter where you are. With 24/7 access, you can view or approve everything in real-time.</div>
-                <a href="#services" class="page-scroll btn btn-xl">Find More</a>
+                <a href="#services" class="page-scroll btn btn-xl">Find Out More</a>
             </div>
         </div>
     </header>
