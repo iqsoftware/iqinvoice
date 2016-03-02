@@ -59,7 +59,23 @@
 	document.getElementById("mce-EMAIL").value="";
    }
    }
-   
+    	function ValidateEmail(inputText)  
+	{  
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+	if(inputText.value!="")
+	{
+	if(inputText.value.match(mailformat))  
+	{  	
+	return true;  
+	}  
+	else  
+	{  
+	alert("You have entered an invalid email address!");  
+	inputText.focus();  
+	return false;  
+	}
+	}	
+	} 
    
 </script>
 </head>
@@ -215,7 +231,7 @@ This means the invoice will end up in the right place at the right time. Make us
 <div class="mc-field-group">
 	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 </label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" onblur="ValidateEmail(this);">
 </div>
 <div class="mc-field-group">
 	<label for="mce-FNAME">First Name </label>
