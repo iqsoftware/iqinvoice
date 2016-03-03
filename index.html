@@ -95,7 +95,7 @@
    else
    {
    var name=document.getElementById("mce-FNAME").value +' ' +document.getElementById("mce-LNAME").value;
-  // emailjs.send("smtp_server", "invoicemail", {"message":document.getElementById("mce-MMERGE4").value,"name":name,"phone":document.getElementById("mce-MMERGE3").value,"email":document.getElementById("mce-EMAIL").value});
+  emailjs.send("smtp_server", "invoicemail", {"message":document.getElementById("mce-MMERGE4").value,"name":name,"phone":document.getElementById("mce-MMERGE3").value,"email":document.getElementById("mce-EMAIL").value});
    //alert("Thanks You for Getting in touch.");
    document.getElementById('slidershow').style.visibility = 'visible'; 
    document.getElementById('mc_embed_signup').style.visibility = 'hidden'; 
@@ -410,7 +410,7 @@ This means the invoice will end up in the right place at the right time. Make us
                         </div>
                     </li>
 					<li>
-					<h2 style="color: white;">Reports :: Average time take to pay </h2>
+					<h2 style="color: white;">Reports :: Average time to pay </h2>
                         <a class="ns-img" href="img/R_Averagetimetopay.jpg"></a>
                         <div class="caption">
                             <p>Average time taken to process an invoice for payment to vendor</p>
